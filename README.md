@@ -1,10 +1,10 @@
-# Universidad [Nombre de la Universidad]  
-## Facultad de [Nombre de la Facultad]  
+# Universidad Técnica de Ambato
+## Facultad de Ingeniería en Sistemas, Electrónica e Industrial
 ### Carrera de Ingeniería en Software  
 
 **Asignatura:** Manejo y Configuración de Software  
-**Nombre del Estudiante:** ___________________________  
-**Fecha:** ___________________  
+**Nombre del Estudiante:** Gabriel Llerena
+**Fecha:** 30/04/2025
 
 ---
 
@@ -27,6 +27,16 @@
 - `fork`  
 - `git pull`
 
+**Comando git clone**
+Copia un repositorio remoto (de GitHub u otro servidor) a tu computadora.
+Un ejemplo de uso seria: `git clone <url_del_repositorio_remoto>
+**Comando  fork**
+Crea una copia del repositorio en tu cuenta de GitHub (no en tu PC).
+Un ejemplo de uso  seria estar en el repositorio que se quiere obtener buscar el botón de Fork y obtener el repositorio.
+![[Pasted image 20250430183254.png]]
+**Comando git pull**
+Trae y fusiona los cambios más recientes del repositorio remoto al local y también actualiza el  área de trabajo.
+El uso mas común es: `git pull origin main`
 ### Parte práctica:
 
 - Realizar un **fork** de este repositorio en la cuenta personal de GitHub del estudiante.
@@ -35,12 +45,20 @@
   - ¿Cómo se realizó el fork?
   - ¿Cómo se realizó el clone del fork?
   - ¿Cómo se verificó que se estaba trabajando sobre el fork y no sobre el repositorio original?
-
+ 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta a la Pregunta 1 -->
+- ¿Cómo se realizó el fork?
+El `Fork` se desarrollo entrando a la cuenta del dueño del repositorio que se quiere obtener, se busca el botón de `Fork`  y se obtiene el repositor en mi cuenta de GitHub.
+- ¿Cómo se realizó el clone del fork?
+ Una vez obtenido el repositorio en mi cuenta de GitHub desde mi laptop lo clon obteniendo el HTTPS y utilizando el comando: `git clone https://github.com/Gabriel-Spartan/EVALUACION_1P_2525.git`
+![[Pasted image 20250430184020.png]]
+- ¿Cómo se verificó que se estaba trabajando sobre el fork y no sobre el repositorio original?
+  Una forma rápida para saber si estoy trabajando en el fork o en el repositorio original es ver en la parte superior derecha el usuario si aparece usted esta en el fork, si aparece el desarrollador original esta en el repositorio original.
 
 ---
+
+
 
 ## Pregunta 2 (1 punto)
 
@@ -52,6 +70,7 @@
 ### Requisitos:
 
 1. Realizar un **primer commit** que incluya únicamente el archivo `.gitignore` con las reglas de exclusión definidas.
+
 2. Realizar un **segundo commit** donde se explique en este README la función del archivo `.gitignore` y se muestre evidencia de que los archivos y carpetas indicadas no están siendo rastreadas por Git.
 
 **Importante:**  
@@ -59,7 +78,14 @@
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu explicación y evidencia para la Pregunta 2 -->
+1. Realizar un **primer commit** que incluya únicamente el archivo `.gitignore` con las reglas de exclusión definidas.
+![[Pasted image 20250430185138.png]]
+2. Realizar un **segundo commit** donde se explique en este README la función del archivo `.gitignore` y se muestre evidencia de que los archivos y carpetas indicadas no están siendo rastreadas por Git.
+Como verificación de que funciona el `.gitignore` se crea dos archivos A.log y B.log los cuales no se pueden rastrear.
+![[Pasted image 20250430185709.png]]
+
+Ahora se puede preparar todo para hacer un `commit` y otorgarle un tag a este:
+![[Pasted image 20250430190111.png]]
 
 ---
 
@@ -88,8 +114,26 @@
 - El flujo debe respetar la estructura de Git Flow con las ramas `develop` y `main`.
 
 **📝 Respuesta:**
+## Pasos para iniciar el uso de `Git Flow`
+`git flow init`
+`git flow <nombre de la rama> start <nombre_de_la_nueva_rama>`
+`git add <. o los nombres de los archivos para agregar>`
+`git commit -m <nombre_del_commit>`
+`git tag Pregunta_3`
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 3 -->
+## Encabezado del Estudiante
+### Información Personal
+**Nombre:** Gabriel Llerena  
+**Carrera:** Ingeniería en Software  
+**Materia:** Manejo y Configuración de Software  
+**Paralelo:** "A"
+### Gustos y Pasiones
+- Me gusta mucho los juegos RPG
+- El baloncesto
+- Me gusta mucho programar en Java
+- Me encanta dibujar en el estilo blanco y negro
+### Sueños y Expectativas
+Salir de viaje conocer varias partes del mundo, graduarme de la carrera de Ingeniería en Software, tener un buen sueldo y una casa propia.
 
 ---
 
@@ -109,7 +153,7 @@
 - Crear un **issue** titulado `"Respuesta a la Pregunta 4"`, en el que se indique que su objetivo es documentar esta pregunta.
 - Realizar los cambios necesarios en este archivo `README.md` para responder esta pregunta.
 - Realizar un **commit** con los cambios y subirlo a la rama `develop` del repositorio remoto.
-- Crear un **pull request** desde `develop` hacia `develop` en GitHub.
+- Crear un **pull request** desde `develop` hacia `main` en GitHub.
 - **Vincular el pull request con el issue creado**, de manera que al ser aprobado y fusionado, el issue se cierre automáticamente.
 - El repositorio debe estar **configurado para requerir una revisión previa al merge**, la cual **debe ser aprobada por el docente**.
 
@@ -122,7 +166,15 @@
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 4 -->
+¿Qué es un **issue** en GitHub?
+Un _issue_ es una herramienta de GitHub que permite **registrar tareas, errores, sugerencias o solicitudes de mejora** dentro de un repositorio. Es una forma de llevar el control del trabajo pendiente o por realizar, y permite que los colaboradores comenten, asignen responsables y establezcan etiquetas.
+¿Qué es un **pull request** y cuál es su finalidad?
+Un _pull request_ (PR) es una solicitud para **fusionar los cambios hechos en una rama** con otra (por lo general hacia `main` o `develop`). Su finalidad es:
+- Revisar el código antes de integrarlo.
+- Permitir que otros miembros del equipo aprueben, comenten o soliciten cambios.
+- Registrar el contexto del cambio.
+¿Cuál es la diferencia entre ambos y cómo se relacionan en un entorno de trabajo colaborativo?
+El `issue` plantea un problema o tarea mientras que el `pull request` es una solicitud de fusión de codigo
 
 ---
 
